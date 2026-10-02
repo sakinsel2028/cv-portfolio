@@ -129,7 +129,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-8">
             <div>
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                I'm a second-year Computer Science and Economics student at Trinity College Dublin. I'm currently seeking a Software Engineering Internship to gain hands-on experience building real products.
+                I'm a third-year Computer Science and Economics student at Trinity College Dublin. I'm currently seeking a Software Engineering Internship to gain hands-on experience building real products.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
                 This year particularly excited about frontend development and React, and I've been deepening my skills through team projects like Nualang. I'm eager to learn from experienced engineers and contribute to meaningful work. I hope to develop both my frontend and backend skills in the future
@@ -282,7 +282,7 @@ export default function Portfolio() {
             <div>
               <h3 className="font-black text-gray-900 mb-4">Links</h3>
               <div className="space-y-2">
-                <a href="https://github.com/sarahosull2026" target="_blank" rel="noopener noreferrer" className="block text-gray-700 hover:text-emerald-600 transition">GitHub</a>
+                <a href="https://github.com/sakinsel2028" target="_blank" rel="noopener noreferrer" className="block text-gray-700 hover:text-emerald-600 transition">GitHub</a>
                 <a href="https://www.linkedin.com/in/sarahosullivan2026/" target="_blank" rel="noopener noreferrer" className="block text-gray-700 hover:text-blue-600 transition">LinkedIn</a>
               </div>
             </div>
