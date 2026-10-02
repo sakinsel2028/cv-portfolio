@@ -1,148 +1,302 @@
 import React, { useState } from 'react';
-import { Github, Linkedin, Mail, ArrowRight, Code2, Zap, Users, Award } from 'lucide-react';
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ArrowRight,
+  Code2,
+  Zap,
+  Users,
+  Award,
+} from 'lucide-react';
 import './App.css';
-
 
 export default function Portfolio() {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   const projects = [
+  {
+    id: 1,
+    title: 'NuaLang',
+    subtitle: 'AI-assisted Irish language learning web app',
+    link: '',
+    linkLabel: 'View NuaLang',
+    tags: ['React', 'Frontend', 'Team of 8', 'GitLab', 'Git'],
+    description:
+      "AI-assisted Irish language learning web app built in a team of 8, in collaboration with NuaLang developers. I worked on the React frontend. Our project was selected as one of the top 3 projects at Trinity College Dublin's Industry-based Software Engineering Awards. We were awarded the 'Public Prize' during our first showcase.",
+    dates: 'Jan 2026 – Apr 2026',
+    cardGradient: 'from-mint-50 to-teal-50',
+    hoverGradient: 'from-mint-100 to-teal-100',
+    border: 'border-mint-200',
+    icon: 'text-teal-500',
+  },
+  {
+    id: 2,
+    title: 'This Website!',
+    subtitle: 'Personal portfolio website',
+    link: 'https://github.com/sakinsel2028/cv-portfolio',
+    linkLabel: 'View source code',
+    tags: ['React', 'Frontend', 'Tailwind CSS'],
+    description:
+      'Designed the layout, implemented the responsive design, and added interactive elements to showcase my projects, skills, and experience. Hope you enjoy it!',
+    dates: '2026',
+    cardGradient: 'from-pink-50 to-rose-50',
+    hoverGradient: 'from-pink-100 to-rose-100',
+    border: 'border-pink-200',
+    icon: 'text-pink-500',
+  },
+  {
+    id: 3,
+    title: 'Programming Project',
+    subtitle: 'Interactive graphical programs and team visualisation',
+    tags: [
+      'Interactive Graphics',
+      'Mouse and Keyboard Input',
+      'Version Control',
+      'Team Project',
+    ],
+    description:
+      'Built interactive graphical programs responding to mouse and keyboard input as part of weekly labs. Contributed to a larger team-based interactive visualisation project using version control workflows. Focused on debugging and clean program structure.',
+    dates: '2025 coursework',
+    cardGradient: 'from-peach-50 to-yellow-50',
+    hoverGradient: 'from-peach-100 to-yellow-100',
+    border: 'border-orange-200',
+    icon: 'text-orange-500',
+  },
+];
+  const skills = [
     {
-      id: 1,
-      title: 'NuaLang',
-      subtitle: 'AI-assisted Irish language learning web app',
-      tags: ['React', 'Frontend', 'Team of 8', 'GitLab'],
-      description: 'AI-assisted Irish language learning web app built in a team of 8. I\'m working on the React frontend, I built the Greetings page, Topic Learning page, hamburger menu navigation, 404/Coming Soon pages, and a Match Game mode. Collaborated via GitLab branches and merge requests.',
-      dates: 'Jan 2026 – Present',
-      color: 'from-emerald-400 to-teal-500'
+      icon: <Code2 size={24} />,
+      title: 'Languages',
+      items: [
+        'Java',
+        'JavaScript',
+        'Prolog',
+        'ARM Assembly',
+        'Python learning',
+        'HTML and CSS learning',
+      ],
+      cardStyle: 'from-lavender-50 to-pink-50',
+      iconStyle: 'text-purple-500',
+      bulletStyle: 'bg-purple-300',
+      borderStyle: 'border-purple-200',
     },
     {
-      id: 2,
-      title: 'Programming Project',
-      subtitle: 'Interactive graphical programs + team visualisation',
-      tags: ['Interactive Graphics', 'Mouse/Keyboard Input', 'Version Control', 'Team Project'],
-      description: 'Built interactive graphical programs responding to mouse + keyboard input as part of weekly labs. Contributed to a larger team-based interactive visualisation project using version control workflows. Focused on debugging and clean program structure.',
-      dates: '2025 (coursework)',
-      color: 'from-orange-400 to-pink-500'
-    }
-  ];
-
-  const skills = [
-    { icon: <Code2 size={24} />, title: 'Languages', items: ['Java (Basics)', 'JavaScript', 'ARM Assembly', 'Python (learning)', 'HTML/CSS (learning)'] },
-    { icon: <Zap size={24} />, title: 'Tools & Frameworks', items: ['React', 'GitHub', 'GitLab', 'Npm'] },
-    { icon: <Users size={24} />, title: 'Core Skills', items: ['OOP', 'Basic Data Structures & Algorithms', 'Debugging', 'Team collaboration', 'Leadership'] }
+      icon: <Zap size={24} />,
+      title: 'Tools and Frameworks',
+      items: ['React', 'Git', 'GitHub', 'GitLab', 'npm'],
+      cardStyle: 'from-blue-50 to-mint-50',
+      iconStyle: 'text-blue-500',
+      bulletStyle: 'bg-blue-300',
+      borderStyle: 'border-blue-200',
+    },
+    {
+      icon: <Users size={24} />,
+      title: 'Core Skills',
+      items: [
+        'Object-oriented programming',
+        'Basic data structures and algorithms',
+        'Debugging',
+        'Team collaboration',
+        'Leadership',
+      ],
+      cardStyle: 'from-peach-50 to-yellow-50',
+      iconStyle: 'text-orange-500',
+      bulletStyle: 'bg-orange-300',
+      borderStyle: 'border-orange-200',
+    },
   ];
 
   const achievements = [
-    { label: 'Academic Scholarships', value: '2x', color: 'bg-yellow-100 text-yellow-700' },
-    { label: 'Team Size', value: '8', color: 'bg-blue-100 text-blue-700' },
-    { label: 'Sponsorship Raised', value: '€35k+', color: 'bg-emerald-100 text-emerald-700' },
-    { label: 'Leadership Roles', value: '2', color: 'bg-purple-100 text-purple-700' }
+    {
+      label: 'Academic Scholarships',
+      value: '2x',
+      color: 'bg-yellow-100 text-yellow-700 border-yellow-200',
+    },
+    {
+      label: 'Industry-based Software Engineering Awards',
+      value: 'Public Prize',
+      color: 'bg-blue-100 text-blue-700 border-blue-200',
+    },
+        {
+      label: 'Women in STEM deloitte Programme',
+      value: 'Selected during secondary school to attend',
+      color: 'bg-blue-100 text-blue-700 border-blue-200',
+    },
+    {
+      label: 'Sponsorship Raised',
+      value: '€35k+',
+      color: 'bg-mint-100 text-teal-700 border-mint-200',
+    },
+    {
+      label: 'Leadership Roles',
+      value: '3',
+      color: 'bg-purple-100 text-purple-700 border-purple-200',
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Playful background pattern */}
-      <div className="fixed inset-0 -z-10 opacity-40 pointer-events-none">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-yellow-200 rounded-3xl blur-2xl"></div>
-        <div className="absolute top-40 right-20 w-40 h-40 bg-blue-200 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 left-1/3 w-36 h-36 bg-pink-200 rounded-2xl blur-2xl"></div>
-        <div className="absolute bottom-40 right-1/4 w-44 h-44 bg-green-200 rounded-full blur-3xl"></div>
+    <div className="min-h-screen overflow-hidden bg-cream-50 text-slate-700">
+      {/* Pastel background decoration */}
+      <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+        <div className="absolute left-0 top-20 h-64 w-64 rounded-full bg-pink-200/40 blur-3xl" />
+        <div className="absolute right-0 top-40 h-72 w-72 rounded-full bg-blue-200/40 blur-3xl" />
+        <div className="absolute bottom-20 left-1/3 h-72 w-72 rounded-full bg-mint-200/40 blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 h-64 w-64 rounded-full bg-yellow-200/40 blur-3xl" />
       </div>
 
       {/* Navigation */}
-      <nav className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-black bg-gradient-to-r from-rose-500 via-pink-600 to-blue-600 bg-clip-text text-transparent">
-            SARAH O'SULLIVAN
+      <nav className="sticky top-0 z-40 border-b border-pink-100 bg-cream-50/85 backdrop-blur-md">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+          <div className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-2xl font-black text-transparent">
+            SARAH O&apos;SULLIVAN
           </div>
-          <div className="flex gap-6 text-sm font-semibold">
-            <a href="#about" className="hover:text-emerald-600 transition">About</a>
-            <a href="#projects" className="hover:text-pink-600 transition">Projects</a>
-            <a href="#skills" className="hover:text-blue-600 transition">Skills</a>
+
+          <div className="flex gap-6 text-sm font-semibold text-slate-600">
+            <a
+              href="#about"
+              className="transition hover:text-pink-500"
+            >
+              About
+            </a>
+            <a
+              href="#projects"
+              className="transition hover:text-purple-500"
+            >
+              Projects
+            </a>
+            <a
+              href="#skills"
+              className="transition hover:text-blue-500"
+            >
+              Skills
+            </a>
           </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="space-y-6">
             <div>
-              <h1 className="text-6xl md:text-7xl font-black mb-2">
-                Hey, I'm <span className="bg-gradient-to-r from-rose-500 via-pink-600 to-blue-600 bg-clip-text text-transparent">Sarah O'Sullivan!</span>
+              <h1 className="mb-4 text-5xl font-black leading-tight text-slate-800 md:text-7xl">
+                Hey, I&apos;m{' '}
+                <span className="bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+                  Sarah!
+                </span>
               </h1>
-              <p className="text-2xl text-gray-700 font-semibold">Computer Science + Economics Student (TCD)</p>
-              <p className="text-xl text-gray-600 font-semibold mt-1">Seeking Software Engineering Internship</p>
+
+              <p className="text-2xl font-semibold text-slate-700">
+                Computer Science and Economics Student
+              </p>
+
+              <p className="mt-1 text-xl font-semibold text-purple-500">
+                Trinity College Dublin
+              </p>
             </div>
-            
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Trinity College Dublin | Dublin, Ireland
+
+            <p className="text-lg leading-relaxed text-slate-600">
+              Based in Dublin, Ireland.
               <br />
-              Passionate about building real features in collaborative teams. Looking to grow my software engineering skills through hands-on internship experience.
+              Passionate about building real features in collaborative teams
+              and looking to grow my software engineering skills through
+              hands-on internship experience.
             </p>
 
-            <div className="flex gap-4 pt-4">
-              <a 
-                href="https://github.com/sarahosull2026"
+            <div className="flex flex-wrap gap-4 pt-4">
+              <a
+                href="https://github.com/sakinsel2028"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full font-semibold hover:bg-gray-800 transition"
+                className="inline-flex items-center gap-2 rounded-full bg-slate-800 px-6 py-3 font-semibold text-white transition hover:bg-slate-700"
               >
-                <Github size={20} /> GitHub
+                <Github size={20} />
+                GitHub
               </a>
-              <a 
+
+              <a
                 href="https://www.linkedin.com/in/sarahosullivan2026/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition"
+                className="inline-flex items-center gap-2 rounded-full bg-blue-400 px-6 py-3 font-semibold text-white transition hover:bg-blue-500"
               >
-                <Linkedin size={20} /> LinkedIn
+                <Linkedin size={20} />
+                LinkedIn
               </a>
-              <a 
+
+              <a
                 href="mailto:sakinsel@tcd.ie"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-pink-500 text-white rounded-full font-semibold hover:bg-pink-600 transition"
+                className="inline-flex items-center gap-2 rounded-full bg-pink-400 px-6 py-3 font-semibold text-white transition hover:bg-pink-500"
               >
-                <Mail size={20} /> Email
+                <Mail size={20} />
+                Email
               </a>
             </div>
 
-            <div className="pt-4 text-sm text-gray-600 space-y-1">
+            <div className="space-y-1 pt-4 text-sm text-slate-600">
               <p>📧 sakinsel@tcd.ie</p>
               <p>📱 +353 83 006 8920</p>
             </div>
           </div>
 
-          {/* Playful illustration area */}
-          <div className="relative h-96 hidden md:block">
-            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-emerald-300 to-teal-400 rounded-3xl rotate-12"></div>
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-br from-pink-300 to-orange-400 rounded-2xl -rotate-6"></div>
-            <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-gradient-to-br from-blue-300 to-indigo-400 rounded-full"></div>
+          {/* Hero illustration */}
+          <div className="relative flex min-h-[360px] items-center justify-center">
+            <div className="absolute h-72 w-72 rounded-full bg-pink-200/70 blur-2xl" />
+            <div className="relative rounded-[3rem] border-4 border-white bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 p-12 shadow-xl">
+              <div className="text-center">
+                <div className="mb-4 text-7xl">👩🏻‍💻</div>
+                <p className="text-xl font-black text-purple-700">
+                  Building, learning,
+                  <br />
+                  and creating ✨
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about" className="max-w-6xl mx-auto px-6 py-20">
-        <div className="bg-gradient-to-br from-emerald-50 to-blue-50 rounded-3xl p-8 md:p-12 border border-emerald-200">
-          <h2 className="text-4xl font-black mb-6 text-gray-900">About Me</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+      <section id="about" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="rounded-[2rem] border border-mint-200 bg-gradient-to-br from-mint-50 to-blue-50 p-8 md:p-12">
+          <h2 className="mb-6 text-4xl font-black text-slate-800">
+            About Me
+          </h2>
+
+          <div className="grid gap-8 md:grid-cols-2">
             <div>
-              <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                I'm a third-year Computer Science and Economics student at Trinity College Dublin. I'm currently seeking a Software Engineering Internship to gain hands-on experience building real products.
+              <p className="mb-4 text-lg leading-relaxed text-slate-700">
+                I&apos;m a third-year Computer Science and Economics student at
+                Trinity College Dublin. I&apos;m currently seeking a Software
+                Engineering Internship to gain hands-on experience building
+                real products.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                This year particularly excited about frontend development and React, and I've been deepening my skills through team projects like Nualang. I'm eager to learn from experienced engineers and contribute to meaningful work. I hope to develop both my frontend and backend skills in the future
+
+              <p className="text-lg leading-relaxed text-slate-700">
+                I&apos;m particularly excited about frontend development and
+                React. I&apos;ve been developing my skills through team
+                projects like NuaLang and hope to grow my frontend and backend
+                skills in the future.
               </p>
             </div>
+
             <div className="space-y-4">
-              <div className="bg-white rounded-2xl p-6 border border-emerald-200">
-                <h3 className="font-bold text-emerald-700 mb-2">Currently Learning</h3>
-                <p className="text-gray-700">Deepening my React skills and building real features in a collaborative team project with version control.</p>
+              <div className="rounded-2xl border border-mint-200 bg-white/80 p-6">
+                <h3 className="mb-2 font-bold text-teal-600">
+                  Currently Learning
+                </h3>
+                <p className="text-slate-600">
+                  About to take on another Group project, It'll start kicking off in a few weeks, stay tuned!
+                </p>
               </div>
-              <div className="bg-white rounded-2xl p-6 border border-pink-200">
-                <h3 className="font-bold text-pink-700 mb-2">I Value</h3>
-                <p className="text-gray-700">Solving problems through code, working effectively with teams, and writing clear, maintainable programs.</p>
+
+              <div className="rounded-2xl border border-pink-200 bg-white/80 p-6">
+                <h3 className="mb-2 font-bold text-pink-600">I Value</h3>
+                <p className="text-slate-600">
+                  Solving problems through code, working effectively with
+                  teams, and writing clear, maintainable programs.
+                </p>
               </div>
             </div>
           </div>
@@ -150,41 +304,60 @@ export default function Portfolio() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-black mb-12 text-gray-900">Featured Projects</h2>
-        
-        <div className="grid md:grid-cols-2 gap-8">
+      <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
+        <h2 className="mb-12 text-4xl font-black text-slate-800">
+          Featured Projects
+        </h2>
+
+        <div className="grid gap-8 md:grid-cols-2">
           {projects.map((project) => (
             <div
               key={project.id}
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
-              className="group relative cursor-pointer"
+              className="group relative"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10`}></div>
-              
-              <div className="bg-white rounded-3xl p-8 h-full border-2 border-gray-200 group-hover:border-transparent transition-all duration-300 group-hover:shadow-2xl">
+              <div
+                className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${project.hoverGradient} transition-opacity duration-300 ${
+                  hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
+                }`}
+              />
+
+              <div
+                className={`relative h-full rounded-3xl border-2 ${project.border} bg-gradient-to-br ${project.cardGradient} p-8 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl`}
+              >
                 <div className="space-y-4">
                   <div>
-                    <h3 className="text-2xl font-black text-gray-900 mb-1">{project.title}</h3>
-                    <p className="text-gray-600 font-semibold">{project.subtitle}</p>
+                    <h3 className="mb-1 text-2xl font-black text-slate-800">
+                      {project.title}
+                    </h3>
+                    <p className="font-semibold text-slate-600">
+                      {project.subtitle}
+                    </p>
                   </div>
 
-                  <p className="text-sm text-gray-700 leading-relaxed">
+                  <p className="text-sm leading-relaxed text-slate-600">
                     {project.description}
                   </p>
 
                   <div className="flex flex-wrap gap-2 pt-4">
-                    {project.tags.map((tag, i) => (
-                      <span key={i} className="text-xs font-bold px-3 py-1 bg-gray-100 text-gray-700 rounded-full">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
 
-                  <p className="text-xs text-gray-500 pt-4">{project.dates}</p>
+                  <p className="pt-4 text-xs text-slate-500">
+                    {project.dates}
+                  </p>
 
-                  <div className="pt-6 flex items-center gap-2 text-gray-900 font-bold group-hover:gap-4 transition-all">
+                  <div
+                    className={`flex items-center gap-2 pt-6 font-bold ${project.icon} transition-all group-hover:gap-4`}
+                  >
                     <span>Learn More</span>
                     <ArrowRight size={18} />
                   </div>
@@ -196,11 +369,14 @@ export default function Portfolio() {
       </section>
 
       {/* Quick Stats */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {achievements.map((item, i) => (
-            <div key={i} className={`${item.color} rounded-2xl p-6 text-center font-bold`}>
-              <div className="text-3xl mb-2">{item.value}</div>
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
+          {achievements.map((item) => (
+            <div
+              key={item.label}
+              className={`${item.color} rounded-2xl border p-6 text-center font-bold`}
+            >
+              <div className="mb-2 text-3xl">{item.value}</div>
               <div className="text-sm">{item.label}</div>
             </div>
           ))}
@@ -208,20 +384,34 @@ export default function Portfolio() {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-black mb-12 text-gray-900">Skills & Expertise</h2>
-        
-        <div className="grid md:grid-cols-3 gap-8">
-          {skills.map((skillGroup, i) => (
-            <div key={i} className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 border border-gray-200">
-              <div className="mb-6 text-emerald-600">
+      <section id="skills" className="mx-auto max-w-6xl px-6 py-20">
+        <h2 className="mb-12 text-4xl font-black text-slate-800">
+          Skills and Expertise
+        </h2>
+
+        <div className="grid gap-8 md:grid-cols-3">
+          {skills.map((skillGroup) => (
+            <div
+              key={skillGroup.title}
+              className={`rounded-3xl border ${skillGroup.borderStyle} bg-gradient-to-br ${skillGroup.cardStyle} p-8`}
+            >
+              <div className={`mb-6 ${skillGroup.iconStyle}`}>
                 {skillGroup.icon}
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">{skillGroup.title}</h3>
+
+              <h3 className="mb-6 text-2xl font-bold text-slate-800">
+                {skillGroup.title}
+              </h3>
+
               <ul className="space-y-3">
-                {skillGroup.items.map((item, j) => (
-                  <li key={j} className="flex items-center gap-3 text-gray-700">
-                    <span className="w-2 h-2 bg-emerald-600 rounded-full"></span>
+                {skillGroup.items.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-slate-600"
+                  >
+                    <span
+                      className={`h-2 w-2 rounded-full ${skillGroup.bulletStyle}`}
+                    />
                     {item}
                   </li>
                 ))}
@@ -231,37 +421,170 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Leadership Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-4xl font-black mb-12 text-gray-900">Leadership & Impact</h2>
-        
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-emerald-100 to-teal-100 rounded-3xl p-8 border-2 border-emerald-300">
-            <Award className="text-emerald-700 mb-4" size={32} />
-            <h3 className="text-2xl font-black text-gray-900 mb-2">HackIreland</h3>
-            <p className="text-gray-700 mb-4 font-semibold">Organiser</p>
-            <p className="text-gray-700 leading-relaxed">Helped secure €35k+ sponsorship from companies including Intercom, Stripe, OpenAI, and DogPatch Labs. Supported event operations and worked with the organiser team to deliver a successful hackathon.</p>
-          </div>
+{/* Leadership Section */}
+<section className="mx-auto max-w-6xl px-6 py-20">
+  <h2 className="mb-12 text-4xl font-black text-slate-800">
+    Leadership and Impact
+  </h2>
 
-          <div className="bg-gradient-to-br from-blue-100 to-indigo-100 rounded-3xl p-8 border-2 border-blue-300">
-            <Users className="text-blue-700 mb-4" size={32} />
-            <h3 className="text-2xl font-black text-gray-900 mb-2">JCR Leadership</h3>
-            <p className="text-gray-700 mb-4 font-semibold">Vice President & Treasurer</p>
-            <p className="text-gray-700 leading-relaxed">Campaigned and received 400+ votes for this position in 2025. I track expenditure and support budgeting (€60,000) for student initiatives. Engage with college governance and student representation.</p>
-          </div>
-        </div>
-      </section>
+  <div className="grid gap-8 md:grid-cols-2">
+    {/* HackIreland */}
+    <div className="rounded-3xl border-2 border-mint-200 bg-gradient-to-br from-mint-50 to-teal-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <Award className="mb-4 text-teal-500" size={32} />
+
+      <h3 className="mb-2 text-2xl font-black text-slate-800">
+        <a
+          href="https://www.instagram.com/hack.ireland/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-teal-500"
+        >
+          HackIreland
+        </a>
+      </h3>
+
+      <p className="mb-4 font-semibold text-teal-600">
+        Organiser
+      </p>
+
+      <p className="leading-relaxed text-slate-600">
+        Helped secure €35k+ sponsorship from companies including Intercom,
+        Stripe, OpenAI, and DogPatch Labs. Supported event operations and
+        worked with the organising team to deliver a successful hackathon.
+      </p>
+
+      <a
+        href="https://www.instagram.com/hack.ireland/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 inline-flex font-bold text-teal-500 transition hover:underline"
+      >
+        View HackIreland →
+      </a>
+    </div>
+
+    {/* Class Representative */}
+    <div className="rounded-3xl border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-rose-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <Users className="mb-4 text-pink-500" size={32} />
+
+      <h3 className="mb-2 text-2xl font-black text-slate-800">
+        <a
+          href="https://www.tcdsu.org/education/class-reps"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-pink-500"
+        >
+          Class Representative
+        </a>
+      </h3>
+
+      <p className="mb-4 font-semibold text-pink-600">
+        Trinity College Dublin Students&apos; Union
+      </p>
+
+      <p className="leading-relaxed text-slate-600">
+        Represented the interests of my peers in academic and administrative
+        matters, facilitating communication between students and university
+        administration.
+      </p>
+
+      <a
+        href="https://www.tcdsu.org/education/class-reps"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 inline-flex font-bold text-pink-500 transition hover:underline"
+      >
+        View Class Representative Role →
+      </a>
+    </div>
+
+    {/* JCR Leadership */}
+    <div className="rounded-3xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <Users className="mb-4 text-blue-500" size={32} />
+
+      <h3 className="mb-2 text-2xl font-black text-slate-800">
+        <a
+          href="https://www.instagram.com/trinityhalljcr/?hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-blue-500"
+        >
+          JCR Leadership
+        </a>
+      </h3>
+
+      <p className="mb-4 font-semibold text-blue-600">
+        Vice President and Treasurer
+      </p>
+
+      <p className="leading-relaxed text-slate-600">
+        Campaigned for and received 400+ votes for this position in 2025.
+        Tracked expenditure and supported budgeting of €60,000 for student
+        initiatives while engaging with college governance and student
+        representation.
+      </p>
+
+      <a
+        href="https://www.instagram.com/trinityhalljcr/?hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 inline-flex font-bold text-blue-500 transition hover:underline"
+      >
+        View JCR Leadership →
+      </a>
+    </div>
+
+    {/* Mentor */}
+    <div className="rounded-3xl border-2 border-orange-200 bg-gradient-to-br from-peach-50 to-yellow-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+      <Users className="mb-4 text-orange-500" size={32} />
+
+      <h3 className="mb-2 text-2xl font-black text-slate-800">
+        <a
+          href="https://www.tcd.ie/student2student/get-support/mentoring/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition hover:text-orange-500"
+        >
+          Mentor
+        </a>
+      </h3>
+
+      <p className="mb-4 font-semibold text-orange-600">
+        Student-to-Student Mentor, Trinity College Dublin
+      </p>
+
+      <p className="leading-relaxed text-slate-600">
+        Provided academic and personal support to fellow students, helping
+        them navigate their studies and personal challenges.
+      </p>
+
+      <a
+        href="https://www.tcd.ie/student2student/get-support/mentoring/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-6 inline-flex font-bold text-orange-500 transition hover:underline"
+      >
+        View Mentoring Role →
+      </a>
+    </div>
+  </div>
+</section>
+
+
 
       {/* CTA Section */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="bg-gradient-to-r from-emerald-500 via-pink-500 to-blue-500 rounded-3xl p-12 text-center text-white">
-          <h2 className="text-4xl font-black mb-6">Let's Connect</h2>
-          <p className="text-lg mb-8 opacity-90">
-            Open to discussing Software Engineering Internship opportunities and collaborations
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="rounded-[2rem] bg-gradient-to-r from-pink-300 via-purple-300 to-blue-300 p-12 text-center text-slate-800">
+          <h2 className="mb-6 text-4xl font-black">Let&apos;s Connect</h2>
+
+          <p className="mb-8 text-lg">
+            Open to Software Engineering Internship opportunities and
+            collaborations.
           </p>
-          <a 
+
+          <a
             href="mailto:sakinsel@tcd.ie"
-            className="inline-block px-8 py-4 bg-white text-gray-900 rounded-full font-bold hover:shadow-lg transition"
+            className="inline-block rounded-full bg-white px-8 py-4 font-bold text-slate-700 transition hover:-translate-y-1 hover:shadow-lg"
           >
             Get In Touch
           </a>
@@ -269,30 +592,48 @@ export default function Portfolio() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-gray-200 bg-gray-50 py-12">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+      <footer className="border-t border-pink-100 bg-pink-50/50 py-12">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="mb-8 grid gap-8 md:grid-cols-3">
             <div>
-              <h3 className="font-black text-gray-900 mb-4">Contact</h3>
-              <div className="space-y-2 text-gray-700">
+              <h3 className="mb-4 font-black text-slate-800">Contact</h3>
+              <div className="space-y-2 text-slate-600">
                 <p>sakinsel@tcd.ie</p>
                 <p>+353 83 006 8920</p>
               </div>
             </div>
+
             <div>
-              <h3 className="font-black text-gray-900 mb-4">Links</h3>
+              <h3 className="mb-4 font-black text-slate-800">Links</h3>
               <div className="space-y-2">
-                <a href="https://github.com/sakinsel2028" target="_blank" rel="noopener noreferrer" className="block text-gray-700 hover:text-emerald-600 transition">GitHub</a>
-                <a href="https://www.linkedin.com/in/sarahosullivan2026/" target="_blank" rel="noopener noreferrer" className="block text-gray-700 hover:text-blue-600 transition">LinkedIn</a>
+                <a
+                  href="https://github.com/sakinsel2028"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-slate-600 transition hover:text-purple-500"
+                >
+                  GitHub
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/sarahosullivan2026/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-slate-600 transition hover:text-blue-500"
+                >
+                  LinkedIn
+                </a>
               </div>
             </div>
+
             <div>
-              <h3 className="font-black text-gray-900 mb-4">Location</h3>
-              <p className="text-gray-700">Dublin, Ireland</p>
+              <h3 className="mb-4 font-black text-slate-800">Location</h3>
+              <p className="text-slate-600">Dublin, Ireland</p>
             </div>
           </div>
-          <div className="border-t border-gray-300 pt-8 text-center text-gray-600">
-            <p>© 2026 Sarah O'Sullivan • Built with React</p>
+
+          <div className="border-t border-pink-200 pt-8 text-center text-slate-500">
+            <p>© 2026 Sarah O&apos;Sullivan · Built with React</p>
           </div>
         </div>
       </footer>
