@@ -69,11 +69,11 @@ export default function Portfolio() {
       title: 'Languages',
       items: [
         'Java',
-        'JavaScript',
         'Prolog',
         'ARM Assembly',
-        'Python learning',
-        'HTML and CSS learning',
+        'Python (learning)',
+        'JavaScript (learning)',
+        'HTML and CSS (learning)',
       ],
       cardStyle: 'from-lavender-50 to-pink-50',
       iconStyle: 'text-purple-500',
@@ -272,8 +272,7 @@ export default function Portfolio() {
               </p>
 
               <p className="text-lg leading-relaxed text-slate-700">
-                I&apos;m particularly excited about frontend development and
-                React. I&apos;ve been developing my skills through team
+                I&apos;ve been developing my skills through team
                 projects like NuaLang and hope to grow my frontend and backend
                 skills in the future.
               </p>
@@ -399,7 +398,7 @@ export default function Portfolio() {
             </a>
           </div>
 
-          {/* JCR Leadership */}
+          {/* Junior Common Room  */}
           <div className="rounded-3xl border-2 border-purple-200 bg-gradient-to-br from-purple-50 to-indigo-50 p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
             <Users className="mb-4 text-purple-500" size={32} />
 
@@ -410,12 +409,12 @@ export default function Portfolio() {
                 rel="noopener noreferrer"
                 className="transition hover:text-purple-500"
               >
-                JCR Leadership
+                Junior Common Room Officer
               </a>
             </h3>
 
             <p className="mb-4 font-semibold text-purple-600">
-              Vice President and Treasurer
+              Vice President and Treasurer of Trinity Hall JCR
             </p>
 
             <p className="leading-relaxed text-slate-600">
@@ -513,7 +512,7 @@ export default function Portfolio() {
                   </span>
 
                   <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
-                    Team of 8
+                    Collaboration
                   </span>
 
                   <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
@@ -701,7 +700,7 @@ export default function Portfolio() {
         </h3>
 
         <p className="leading-relaxed text-slate-600">
-          I play five or more instruments, with the Celtic harp being my
+          I play five+ instruments, with the Celtic harp being my personal
           favourite.
         </p>
       </div>
