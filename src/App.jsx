@@ -12,25 +12,25 @@ export default function Portfolio() {
       title: 'NuaLang',
       subtitle: 'AI-assisted Irish language learning web app',
       tags: ['React', 'Frontend', 'Team of 8', 'GitLab'],
-      description: 'AI-assisted Irish language learning web app built in a team of 8. I\'m working on the React frontend — built the Greetings page, Topic Learning page, hamburger menu navigation, 404/Coming Soon pages, and a Match Game mode. Collaborated via GitLab branches and merge requests.',
+      description: 'AI-assisted Irish language learning web app built in a team of 8. I\'m working on the React frontend, I built the Greetings page, Topic Learning page, hamburger menu navigation, 404/Coming Soon pages, and a Match Game mode. Collaborated via GitLab branches and merge requests.',
       dates: 'Jan 2026 – Present',
       color: 'from-emerald-400 to-teal-500'
     },
     {
       id: 2,
-      title: 'CSU11013 Programming Project',
+      title: 'Programming Project',
       subtitle: 'Interactive graphical programs + team visualisation',
       tags: ['Interactive Graphics', 'Mouse/Keyboard Input', 'Version Control', 'Team Project'],
       description: 'Built interactive graphical programs responding to mouse + keyboard input as part of weekly labs. Contributed to a larger team-based interactive visualisation project using version control workflows. Focused on debugging and clean program structure.',
-      dates: '2026 (coursework)',
+      dates: '2025 (coursework)',
       color: 'from-orange-400 to-pink-500'
     }
   ];
 
   const skills = [
-    { icon: <Code2 size={24} />, title: 'Languages', items: ['Java', 'JavaScript', 'ARM Assembly', 'Python (learning)', 'HTML/CSS (learning)'] },
-    { icon: <Zap size={24} />, title: 'Tools & Frameworks', items: ['React', 'Git', 'GitHub', 'GitLab', 'npm'] },
-    { icon: <Users size={24} />, title: 'Core Skills', items: ['OOP', 'Basic Data Structures & Algorithms', 'Debugging', 'Team collaboration'] }
+    { icon: <Code2 size={24} />, title: 'Languages', items: ['Java (Basics)', 'JavaScript', 'ARM Assembly', 'Python (learning)', 'HTML/CSS (learning)'] },
+    { icon: <Zap size={24} />, title: 'Tools & Frameworks', items: ['React', 'GitHub', 'GitLab', 'Npm'] },
+    { icon: <Users size={24} />, title: 'Core Skills', items: ['OOP', 'Basic Data Structures & Algorithms', 'Debugging', 'Team collaboration', 'Leadership'] }
   ];
 
   const achievements = [
@@ -53,8 +53,8 @@ export default function Portfolio() {
       {/* Navigation */}
       <nav className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-2xl font-black bg-gradient-to-r from-emerald-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
-            SARAH
+          <div className="text-2xl font-black bg-gradient-to-r from-rose-500 via-pink-600 to-blue-600 bg-clip-text text-transparent">
+            SARAH O'SULLIVAN
           </div>
           <div className="flex gap-6 text-sm font-semibold">
             <a href="#about" className="hover:text-emerald-600 transition">About</a>
@@ -70,7 +70,7 @@ export default function Portfolio() {
           <div className="space-y-6">
             <div>
               <h1 className="text-6xl md:text-7xl font-black mb-2">
-                Hey, I'm <span className="bg-gradient-to-r from-emerald-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">Sarah</span>
+                Hey, I'm <span className="bg-gradient-to-r from-rose-500 via-pink-600 to-blue-600 bg-clip-text text-transparent">Sarah O'Sullivan!</span>
               </h1>
               <p className="text-2xl text-gray-700 font-semibold">Computer Science + Economics Student (TCD)</p>
               <p className="text-xl text-gray-600 font-semibold mt-1">Seeking Software Engineering Internship</p>
@@ -79,7 +79,7 @@ export default function Portfolio() {
             <p className="text-lg text-gray-600 leading-relaxed">
               Trinity College Dublin | Dublin, Ireland
               <br />
-              Passionate about React and building real features in collaborative teams. Looking to grow my software engineering skills through hands-on internship experience.
+              Passionate about building real features in collaborative teams. Looking to grow my software engineering skills through hands-on internship experience.
             </p>
 
             <div className="flex gap-4 pt-4">
@@ -132,7 +132,7 @@ export default function Portfolio() {
                 I'm a second-year Computer Science and Economics student at Trinity College Dublin. I'm currently seeking a Software Engineering Internship to gain hands-on experience building real products.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                I'm particularly excited about frontend development and React, and I've been deepening my skills through team projects like NuaLang. I'm eager to learn from experienced engineers and contribute to meaningful work.
+                This year particularly excited about frontend development and React, and I've been deepening my skills through team projects like Nualang. I'm eager to learn from experienced engineers and contribute to meaningful work. I hope to develop both my frontend and backend skills in the future
               </p>
             </div>
             <div className="space-y-4">
@@ -247,7 +247,7 @@ export default function Portfolio() {
             <Users className="text-blue-700 mb-4" size={32} />
             <h3 className="text-2xl font-black text-gray-900 mb-2">JCR Leadership</h3>
             <p className="text-gray-700 mb-4 font-semibold">Vice President & Treasurer</p>
-            <p className="text-gray-700 leading-relaxed">Managed tracking of expenditure and supported budgeting for student initiatives. Engaged with college governance and student representation.</p>
+            <p className="text-gray-700 leading-relaxed">Campaigned and received 400+ votes for this position in 2025. I track expenditure and support budgeting (€60,000) for student initiatives. Engage with college governance and student representation.</p>
           </div>
         </div>
       </section>
