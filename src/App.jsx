@@ -108,31 +108,7 @@ export default function Portfolio() {
   ];
 
   const achievements = [
-    {
-      label: 'Academic Scholarships',
-      value: '2x',
-      color: 'bg-yellow-100 text-yellow-700 border-yellow-200',
-    },
-    {
-      label: 'Industry-based Software Engineering Awards',
-      value: 'Public Prize',
-      color: 'bg-blue-100 text-blue-700 border-blue-200',
-    },
-        {
-      label: 'Women in STEM deloitte Programme',
-      value: 'Selected during secondary school to attend',
-      color: 'bg-blue-100 text-blue-700 border-blue-200',
-    },
-    {
-      label: 'Sponsorship Raised',
-      value: '€35k+',
-      color: 'bg-mint-100 text-teal-700 border-mint-200',
-    },
-    {
-      label: 'Leadership Roles',
-      value: '3',
-      color: 'bg-purple-100 text-purple-700 border-purple-200',
-    },
+    
   ];
 
   return (
@@ -241,19 +217,7 @@ export default function Portfolio() {
           </div>
 
           {/* Hero illustration */}
-          <div className="relative flex min-h-[360px] items-center justify-center">
-            <div className="absolute h-72 w-72 rounded-full bg-pink-200/70 blur-2xl" />
-            <div className="relative rounded-[3rem] border-4 border-white bg-gradient-to-br from-pink-100 via-purple-100 to-blue-100 p-12 shadow-xl">
-              <div className="text-center">
-                <div className="mb-4 text-7xl">👩🏻‍💻</div>
-                <p className="text-xl font-black text-purple-700">
-                  Building, learning,
-                  <br />
-                  and creating ✨
-                </p>
-              </div>
-            </div>
-          </div>
+        
         </div>
       </section>
 
@@ -303,71 +267,7 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="mb-12 text-4xl font-black text-slate-800">
-          Featured Projects
-        </h2>
-
-        <div className="grid gap-8 md:grid-cols-2">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              onMouseEnter={() => setHoveredProject(project.id)}
-              onMouseLeave={() => setHoveredProject(null)}
-              className="group relative"
-            >
-              <div
-                className={`absolute inset-0 rounded-3xl bg-gradient-to-br ${project.hoverGradient} transition-opacity duration-300 ${
-                  hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
-                }`}
-              />
-
-              <div
-                className={`relative h-full rounded-3xl border-2 ${project.border} bg-gradient-to-br ${project.cardGradient} p-8 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl`}
-              >
-                <div className="space-y-4">
-                  <div>
-                    <h3 className="mb-1 text-2xl font-black text-slate-800">
-                      {project.title}
-                    </h3>
-                    <p className="font-semibold text-slate-600">
-                      {project.subtitle}
-                    </p>
-                  </div>
-
-                  <p className="text-sm leading-relaxed text-slate-600">
-                    {project.description}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 pt-4">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <p className="pt-4 text-xs text-slate-500">
-                    {project.dates}
-                  </p>
-
-                  <div
-                    className={`flex items-center gap-2 pt-6 font-bold ${project.icon} transition-all group-hover:gap-4`}
-                  >
-                    <span>Learn More</span>
-                    <ArrowRight size={18} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
+  
       {/* Quick Stats */}
       <section className="mx-auto max-w-6xl px-6 py-20">
         <div className="grid grid-cols-2 gap-6 md:grid-cols-4">
@@ -383,43 +283,6 @@ export default function Portfolio() {
         </div>
       </section>
 
-      {/* Skills Section */}
-      <section id="skills" className="mx-auto max-w-6xl px-6 py-20">
-        <h2 className="mb-12 text-4xl font-black text-slate-800">
-          Skills and Expertise
-        </h2>
-
-        <div className="grid gap-8 md:grid-cols-3">
-          {skills.map((skillGroup) => (
-            <div
-              key={skillGroup.title}
-              className={`rounded-3xl border ${skillGroup.borderStyle} bg-gradient-to-br ${skillGroup.cardStyle} p-8`}
-            >
-              <div className={`mb-6 ${skillGroup.iconStyle}`}>
-                {skillGroup.icon}
-              </div>
-
-              <h3 className="mb-6 text-2xl font-bold text-slate-800">
-                {skillGroup.title}
-              </h3>
-
-              <ul className="space-y-3">
-                {skillGroup.items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 text-slate-600"
-                  >
-                    <span
-                      className={`h-2 w-2 rounded-full ${skillGroup.bulletStyle}`}
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
 
 {/* Leadership Section */}
 <section className="mx-auto max-w-6xl px-6 py-20">
@@ -570,7 +433,200 @@ export default function Portfolio() {
   </div>
 </section>
 
+{/* Projects Section */}
+<section id="projects" className="mx-auto max-w-6xl px-6 py-20">
+  <h2 className="mb-12 text-4xl font-black text-slate-800">
+    Featured Projects
+  </h2>
 
+  <div className="grid gap-8 md:grid-cols-2">
+    {/* NuaLang */}
+    <div className="group relative">
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-mint-100 to-teal-100 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+      <div className="relative h-full rounded-3xl border-2 border-mint-200 bg-gradient-to-br from-mint-50 to-teal-50 p-8 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-1 text-2xl font-black text-slate-800">
+              NuaLang
+            </h3>
+
+            <p className="font-semibold text-slate-600">
+              AI-assisted Irish language learning web app
+            </p>
+          </div>
+
+          <p className="text-sm leading-relaxed text-slate-600">
+            AI-assisted Irish language learning web app built in a team of 8,
+            in collaboration with NuaLang developers. I worked on the React
+            frontend. Our project was selected as one of the top 3 projects at
+            Trinity College Dublin&apos;s Industry-based Software Engineering
+            Awards. We were awarded the &apos;Public Prize&apos; during our
+            first showcase.
+          </p>
+
+          <div className="flex flex-wrap gap-2 pt-4">
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              React
+            </span>
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              Frontend
+            </span>
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              Team of 8
+            </span>
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              GitLab
+            </span>
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              Git
+            </span>
+          </div>
+
+          <p className="pt-4 text-xs text-slate-500">
+            Jan 2026 – Apr 2026
+          </p>
+
+          <a
+            href="https://www.linkedin.com/company/sweng-group-31-tcd-2026-nualang/posts/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 pt-6 font-bold text-teal-500 transition-all hover:gap-4"
+          >
+            <span>View NuaLang</span>
+            <ArrowRight size={18} />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* This Website */}
+    <div className="group relative">
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-pink-100 to-rose-100 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+      <div className="relative h-full rounded-3xl border-2 border-pink-200 bg-gradient-to-br from-pink-50 to-rose-50 p-8 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-1 text-2xl font-black text-slate-800">
+              This Website!
+            </h3>
+
+            <p className="font-semibold text-slate-600">
+              Personal portfolio website
+            </p>
+          </div>
+
+          <p className="text-sm leading-relaxed text-slate-600">
+            Designed the layout, implemented the responsive design, and added
+            interactive elements to showcase my projects, skills, and
+            experience. Hope you enjoy it!
+          </p>
+
+          <div className="flex flex-wrap gap-2 pt-4">
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              React
+            </span>
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              Frontend
+            </span>
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              Tailwind CSS
+            </span>
+          </div>
+
+          <p className="pt-4 text-xs text-slate-500">
+            2026
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Programming Project */}
+    <div className="group relative">
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-peach-100 to-yellow-100 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
+      <div className="relative h-full rounded-3xl border-2 border-orange-200 bg-gradient-to-br from-peach-50 to-yellow-50 p-8 transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-xl">
+        <div className="space-y-4">
+          <div>
+            <h3 className="mb-1 text-2xl font-black text-slate-800">
+              Programming Project
+            </h3>
+
+            <p className="font-semibold text-slate-600">
+              Interactive graphical programs and team visualisation
+            </p>
+          </div>
+
+          <p className="text-sm leading-relaxed text-slate-600">
+            Built interactive graphical programs responding to mouse and
+            keyboard input as part of weekly labs. Contributed to a larger
+            team-based interactive visualisation project using version control
+            workflows. Focused on debugging and clean program structure.
+          </p>
+
+          <div className="flex flex-wrap gap-2 pt-4">
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              Interactive Graphics
+            </span>
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              Mouse and Keyboard Input
+            </span>
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              Version Control
+            </span>
+            <span className="rounded-full border border-white/70 bg-white/70 px-3 py-1 text-xs font-bold text-slate-600">
+              Team Project
+            </span>
+          </div>
+
+          <p className="pt-4 text-xs text-slate-500">
+            2025 coursework
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+      {/* Skills Section */}
+      <section id="skills" className="mx-auto max-w-6xl px-6 py-20">
+        <h2 className="mb-12 text-4xl font-black text-slate-800">
+          Skills and Expertise
+        </h2>
+
+        <div className="grid gap-8 md:grid-cols-3">
+          {skills.map((skillGroup) => (
+            <div
+              key={skillGroup.title}
+              className={`rounded-3xl border ${skillGroup.borderStyle} bg-gradient-to-br ${skillGroup.cardStyle} p-8`}
+            >
+              <div className={`mb-6 ${skillGroup.iconStyle}`}>
+                {skillGroup.icon}
+              </div>
+
+              <h3 className="mb-6 text-2xl font-bold text-slate-800">
+                {skillGroup.title}
+              </h3>
+
+              <ul className="space-y-3">
+                {skillGroup.items.map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-center gap-3 text-slate-600"
+                  >
+                    <span
+                      className={`h-2 w-2 rounded-full ${skillGroup.bulletStyle}`}
+                    />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="mx-auto max-w-6xl px-6 py-20">
